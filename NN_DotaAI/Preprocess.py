@@ -22,11 +22,21 @@ import pandas as pd
 # alter file according to above, add dist etc.
 # store altered .csv file in processed directory
 
+# Store tower positions
+tower_positions = {"r1": 1,
+                   "r2": 2,
+                   "r3": 3,
+                   "d1": 1,
+                   "d2": 2,
+                   "d3": 3}
+
 def add_fields(dataframe):
     dataframe["enemy proximity"] = 1
     dataframe["ally proximity"] = 1
     dataframe["closest ally tower"] = 1
     dataframe["closest enemy tower"] = 1
+    # Todo: Also add proximity changes based on time t
+
 
 def process():
     JsonToCsv.convert('test.json')
@@ -36,7 +46,7 @@ def process():
     add_fields(dataframe=pd_df)
     print(pd_df)
 
-    # Skapa tensor, pandas to_numpy()
+    # Create tensor, pandas to_numpy()
     tensor = torch.tensor(pd_df.to_numpy(), dtype=float)
     print(tensor)
 
