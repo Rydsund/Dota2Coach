@@ -1,0 +1,1 @@
+curl localhost:5600 --data-binary "@C:\Users\Vryds\Desktop\1000.dem"
