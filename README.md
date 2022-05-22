@@ -20,14 +20,14 @@ In the explorer you can decide what patch you want replays from, min/max length 
 ## Step 2: Download Replays
 Follow the instructions in main.py and run thread_pool(download, PATH_TO_MATCH_IDS, workers).
 
-**NOTE: When downloading a large quantity of replays it requires quite a lot of disk space(1000 replays ~= 50gb)**
+**NOTE: When downloading a large quantity of replays it requires quite a lot of disk space(1000 replays ~50gb)**
 
 The replays will be downloaded as .dem-files compressed into .bz2-format.
 
 ## Step 3: Extract .dem
 Follow the instructions in main.py and run thread_pool(extract, PATH_TO_BZ2, workers).
 
-**NOTE: When extracting a large quantity of replays it requires quite a lot of disk space(1000 replays ~= 60gb)**
+**NOTE: When extracting a large quantity of replays it requires quite a lot of disk space(1000 replays ~60gb)**
 
 ## Step 4: Parse data
 Open script 'parse.java'.
